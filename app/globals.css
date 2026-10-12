@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-outfit);
+  --font-serif: var(--font-fraunces);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7f4ef;
+  color: #1b1430;
+  font-family: var(--font-outfit), sans-serif;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.72rem 1.15rem;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pill:disabled {
+  opacity: 0.45;
+}
+
+.pill-primary {
+  background: #5424d6;
+  color: white;
+}
+
+.pill-primary:hover {
+  background: #4318b8;
+}
+
+.pill-outline {
+  border: 1.5px solid #6a3de8;
+  color: #5424d6;
+  background: transparent;
+}
+
+.pill-outline:hover {
+  background: #f3edff;
+}
+
+.pill-light {
+  background: white;
+  color: #3d1fa8;
+}
+
+.floral-word {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 0.78;
+  background-image: url("/floral-tile.svg");
+  background-size: 220px 220px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid #6a3de8;
+  outline-offset: 3px;
+}
